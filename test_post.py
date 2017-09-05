@@ -8,12 +8,16 @@ def convert_b64(file_path):
     return base64.encodestring(open(file_path, 'rb').read()).decode("utf-8")
 
 if __name__ == '__main__':
+    #送信先
     url = "http://0.0.0.0:5000/post_request"
+    #画像ファイル
     image = "test.jpg"
+    #画像の名前
     json_key = "image0000"
+    
     method = "POST"
     headers = {"Content-Type" : "application/json"}
-    #エンコードした
+    #エンコードしたもの
     value = convert_b64(image)
     #json_key:名前
     #value:エンコードしたもの
