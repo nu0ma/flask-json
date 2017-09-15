@@ -46,5 +46,7 @@ def post_request():
 
 if __name__ == "__main__":
     app.debug = True
+    #host="IPアドレス"のipは自分のpcのip
+    #ipを変えるときはここを変える
     app.run(host="0.0.0.0")
-    # curl http://0.0.0.0/post_request -X POST -H "Content-Type: application/json" -}''{"key": "value"}
+    
