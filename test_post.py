@@ -9,6 +9,7 @@ def convert_b64(file_path):
 
 if __name__ == '__main__':
     #送信先
+    #post_request
     url = "http://0.0.0.0:5000/post_request"
     #画像ファイル
     image = "test.jpg"
