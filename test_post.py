@@ -18,12 +18,14 @@ if __name__ == '__main__':
     method = "POST"
     headers = {"Content-Type" : "application/json"}
     #エンコードしたもの
+   
     value = convert_b64(image)
     #json_key:名前
-    #value:エンコードしたもの
+    #value:中身
     
     # PythonオブジェクトをJSONに変換する
     obj = {json_key : value}
+    #json_data:認識結果などのjsonを入れてもOK
     json_data = json.dumps(obj).encode("utf-8")
     # httpリクエストを準備してPOST
     request = urllib.request.Request(url, data=json_data, method=method, headers=headers)
